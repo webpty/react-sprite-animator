@@ -2,7 +2,7 @@
 
 Project forked from https://github.com/jcblw/react-sprite-animator
 
-[![Build Status](https://travis-ci.org/jcblw/react-sprite-animator.svg?branch=master)](https://travis-ci.org/jcblw/react-sprite-animator)
+[![Build Status](https://travis-ci.org/webpty/react-sprite-scaled-animator.svg?branch=master)](https://travis-ci.org/webpty/react-sprite-scaled-animator)
 
 This is a component that animates through an image sprite. 
 
