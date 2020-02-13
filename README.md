@@ -4,7 +4,7 @@ Project forked from https://github.com/jcblw/react-sprite-animator
 
 [![Build Status](https://travis-ci.org/webpty/react-sprite-scaled-animator.svg?branch=master)](https://travis-ci.org/webpty/react-sprite-scaled-animator)
 
-This is a component that animates through an image sprite. 
+A React component that animates through an image sprite while scaling to its parent container. 
 
 - [Animated Heart Example](http://react-sprite-animator.surge.sh/) 
 
@@ -29,7 +29,6 @@ This is a component that animates through an image sprite.
 
 - width **{number}** - width of clipped sprite (original, non-scaled dimensions)
 - height **{number}** - height of clipped sprite (original, non-scaled dimensions)
-- scale **{number}** - scale of the original sprite (default: 1, retina / @2x: 2)
 - sprite **{string}** - path to sprite
 - direction **{string}** - horizontal/vertical
 - shouldAnimate **{bool}** - if the sprite should animate

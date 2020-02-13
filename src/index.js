@@ -8,7 +8,6 @@ const propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   sprite: PropTypes.string,
-  scale: PropTypes.number,
   direction: PropTypes.string,
   shouldAnimate: PropTypes.bool,
   loop: PropTypes.bool,
@@ -24,12 +23,12 @@ const propTypes = {
   reset: PropTypes.bool
 }
 const defaultProps = {
-  scale: 1,
   direction: 'horizontal',
   shouldAnimate: true,
   loop: true,
   startFrame: 0,
   fps: 60,
+  stopLastFrame: true,
   onError: noop,
   onLoad: noop,
   onEnd: noop
@@ -191,9 +190,7 @@ class SpriteAnimator extends Component {
       width: '100%',
       height: '100%',
     }
-    return (
-      <div className={className} style={blockStyle}></div>
-    )
+    return <div className={className} style={blockStyle} />
   }
 }
 

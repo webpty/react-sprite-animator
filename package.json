@@ -1,6 +1,6 @@
 {
   "name": "react-sprite-scaled-animator",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "A react sprite animating component that scales to its container",
   "main": "lib/index.js",
   "scripts": {
