@@ -57,8 +57,12 @@
     ]
   },
   "dependencies": {
-    "npm-check-updates": "^4.0.1",
     "raf": "^3.4.1",
     "react": "^16.8.6"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
   }
 }
