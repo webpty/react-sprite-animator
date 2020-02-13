@@ -1,7 +1,7 @@
 {
-  "name": "react-sprite-animator",
-  "version": "1.3.0",
-  "description": "A react component that loads sprite image and the runs it as an animation",
+  "name": "react-sprite-scaled-animator",
+  "version": "1.0.0",
+  "description": "A react sprite animating component that scales to its container",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint ./{src,test}/*.js",
@@ -12,19 +12,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcblw/react-sprite-animator.git"
+    "url": "git+https://github.com/webpty/react-sprite-scaled-animator.git"
   },
   "keywords": [
     "react",
     "sprite",
     "animations"
   ],
-  "author": "Jacob Lowe",
+  "author": "David Auffret",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jcblw/react-sprite-animator/issues"
+    "url": "https://github.com/webpty/react-sprite-scaled-animator/issues"
   },
-  "homepage": "https://github.com/jcblw/react-sprite-animator#readme",
+  "homepage": "https://github.com/webpty/react-sprite-scaled-animator#readme",
   "peerDependencies": {
     "react": "^16"
   },

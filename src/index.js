@@ -159,7 +159,7 @@ class SpriteAnimator extends Component {
   }
 
   getSpritePosition (frame = 0, options = {}) {
-    const {direction, width, height, wrapAfter, scale = 1} = options
+    const {direction, wrapAfter} = options
     const isHorizontal = direction === 'horizontal'
 
     let row, col
@@ -170,9 +170,9 @@ class SpriteAnimator extends Component {
       row = isHorizontal ? Math.floor(frame / wrapAfter) : frame % wrapAfter
       col = isHorizontal ? frame % wrapAfter : Math.floor(frame / wrapAfter)
     }
-    const _width = -width * col / scale
-    const _height = -height * row / scale
-    return `${_width}px ${_height}px`
+    const _width = -100 * col
+    const _height = -100 * row
+    return `${_width}% ${_height}%`
   }
 
   reset () {
@@ -182,14 +182,14 @@ class SpriteAnimator extends Component {
   }
 
   render () {
-    const {sprite, width, height, className, scale} = this.props
+    const {sprite, width, height, className} = this.props
     const {isLoaded, currentFrame, spriteWidth, spriteHeight} = this.state
     const blockStyle = {
       backgroundImage: isLoaded ? `url(${sprite})` : null,
       backgroundPosition: isLoaded ? this.getSpritePosition(currentFrame, this.props) : null,
-      backgroundSize: `${spriteWidth / scale}px ${spriteHeight / scale}px`,
-      width: `${width / scale}px`,
-      height: `${height / scale}px`
+      backgroundSize: `${spriteWidth / width * 100}% ${spriteHeight / height * 100}%`,
+      width: '100%',
+      height: '100%',
     }
     return (
       <div className={className} style={blockStyle}></div>

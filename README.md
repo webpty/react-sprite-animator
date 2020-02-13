@@ -1,6 +1,6 @@
-# React Sprite Animator
+# React Sprite Scaled Animator
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jcblw/react-sprite-animator.svg)](https://greenkeeper.io/)
+Project forked from https://github.com/jcblw/react-sprite-animator
 
 [![Build Status](https://travis-ci.org/jcblw/react-sprite-animator.svg?branch=master)](https://travis-ci.org/jcblw/react-sprite-animator)
 
@@ -13,7 +13,7 @@ This is a component that animates through an image sprite.
 
 ### Install
 
-    $ npm i react-sprite-animator -S
+    $ npm i react-sprite-scaled-animator -S
 
 ### Usage
 
