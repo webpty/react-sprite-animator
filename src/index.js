@@ -21,7 +21,7 @@ const propTypes = {
   wrapAfter: PropTypes.number,
   frame: PropTypes.number,
   reset: PropTypes.bool,
-  framesToPlay: PropTypes.bool
+  framesToPlay: PropTypes.number
 }
 const defaultProps = {
   direction: 'horizontal',
@@ -60,7 +60,7 @@ class SpriteAnimator extends Component {
   }
 
   loadSprite () {
-    const {sprite, width, height, direction, onError, onLoad, frameCount} = this.props
+    const {sprite, width, height, direction, onError, onLoad, frameCount, framesToPlay} = this.props
     const {isLoaded, hasErrored} = this.state
     if (!isLoaded && !hasErrored) {
       SpriteAnimator.loadImage(sprite, (err, image) => {
@@ -137,7 +137,7 @@ class SpriteAnimator extends Component {
     }
   }
 
-  static getDerivedStateFromProps ({sprite, reset, startFrame, frame}) {
+  UNSAFE_componentWillReceiveProps ({sprite, reset, startFrame, frame}) {
     const {sprite: lastSprite} = this.props
     const newState = {}
     if (sprite !== lastSprite) {
