@@ -20,7 +20,8 @@ const propTypes = {
   frameCount: PropTypes.number,
   wrapAfter: PropTypes.number,
   frame: PropTypes.number,
-  reset: PropTypes.bool
+  reset: PropTypes.bool,
+  framesToPlay: PropTypes.bool
 }
 const defaultProps = {
   direction: 'horizontal',
@@ -75,7 +76,7 @@ class SpriteAnimator extends Component {
         onLoad()
         this.setState({
           isLoaded: true,
-          maxFrames: frameCount || Math.floor(direction === 'horizontal' ?
+          maxFrames: framesToPlay || frameCount || Math.floor(direction === 'horizontal' ?
             image.width / width :
             image.height / height
           ),
