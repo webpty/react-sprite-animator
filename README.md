@@ -36,6 +36,7 @@ A React component that animates through an image sprite while scaling to its par
 - fps **{number}** - the frame rate (frames per second) target
 - stopLastFrame **{bool}** - stops animation from looping
 - frame **{number}** - manually sets current frame
+- framesToPlay **{number}** - manually sets number of frames to play
 
 
 **Only required for two-dimensional sprites**
