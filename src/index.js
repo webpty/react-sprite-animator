@@ -136,7 +136,7 @@ class SpriteAnimator extends Component {
     }
   }
 
-  componentWillReceiveProps ({sprite, reset, startFrame, frame}) {
+  static getDerivedStateFromProps ({sprite, reset, startFrame, frame}) {
     const {sprite: lastSprite} = this.props
     const newState = {}
     if (sprite !== lastSprite) {
