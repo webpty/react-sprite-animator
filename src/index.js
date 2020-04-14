@@ -60,7 +60,7 @@ class SpriteAnimator extends Component {
   }
 
   loadSprite () {
-    const {sprite, width, height, direction, onError, onLoad, frameCount, framesToPlay} = this.props
+    const {sprite, width, height, direction, onError, onLoad, frameCount} = this.props
     const {isLoaded, hasErrored} = this.state
     if (!isLoaded && !hasErrored) {
       SpriteAnimator.loadImage(sprite, (err, image) => {
@@ -76,7 +76,7 @@ class SpriteAnimator extends Component {
         onLoad()
         this.setState({
           isLoaded: true,
-          maxFrames: framesToPlay || frameCount || Math.floor(direction === 'horizontal' ?
+          maxFrames: frameCount || Math.floor(direction === 'horizontal' ?
             image.width / width :
             image.height / height
           ),
@@ -96,15 +96,15 @@ class SpriteAnimator extends Component {
       return this.loadSprite()
     }
 
-    const {shouldAnimate, fps, stopLastFrame, onEnd} = this.props
+    const {shouldAnimate, fps, stopLastFrame, onEnd, startFrame, framesToPlay} = this.props
     if (shouldAnimate) {
       const {maxFrames, currentFrame} = this.state
-      const nextFrame = currentFrame + 1 >= maxFrames ? 0 : currentFrame + 1
+      const nextFrame = currentFrame + 1 >= maxFrames ? startFrame : currentFrame + 1
 
       if (!shouldAnimate) {
         return
       }
-      if (nextFrame === 0 && stopLastFrame) {
+      if (nextFrame === startFrame && stopLastFrame || nextFrame === startFrame + framesToPlay) {
         this.prevTime = 0
         return onEnd()
       }
